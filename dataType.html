@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <style>
+
+       
+    </style>
+  <title>JS Data Types</title>
+</head>
+<body>
+
+  <h2>JS Data Types</h2>
+  <ul>
+    <li>String: <span id="string"></span></li>
+    <li>Number: <span id="number"></span></li>
+    <li>Boolean: <span id="boolean"></span></li>
+    <li>Null: <span id="null"></span></li>
+    <li>Object: <span id="object"></span></li>
+    <li>Array: <span id="array"></span></li>
+    <li>Function: <span id="function"></span></li>
+    <li>Symbol: <span id="symbol"></span></li>
+    <li>BigInt: <span id="bigint"></span></li>
+  </ul>
+
+  <script>
+    let str = "Hello, world ";
+    let num = 42;
+    let bool = true;
+    let nul = null;
+    let sym = Symbol("id");
+    let big = 1234567890123456789012345678901234567890;
+
+    
+    let obj = { name: "Alice", age: 25 };
+    let arr = [1, 2, 3];
+    let func = function()
+     { 
+        return "I'm a function!"; 
+    }
+
+   
+    document.getElementById("string").textContent = str;
+    document.getElementById("number").textContent = num;
+    document.getElementById("boolean").textContent = bool;
+    document.getElementById("null").textContent = nul;
+    document.getElementById("object").textContent = JSON.stringify(obj);
+    document.getElementById("array").textContent = arr.join(", ");
+    document.getElementById("function").textContent = func();
+    document.getElementById("symbol").textContent = sym.toString();
+    document.getElementById("bigint").textContent = big.toString();
+  </script>
+
+</body>
+</html>
