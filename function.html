@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <style>
+
+        .btn {
+            border: 1px solid black;
+            width: 100px;
+            text-align: center;
+            background-color: red;
+            padding: 10px;
+            margin: 10px;
+            font-size: 120%;
+        }
+    </style>
+<body>
+
+<h1>JavaScript Functions</h1>
+
+<button class="btn" id="btn">subscribe</button>
+<br>
+
+
+<span id="demo"></span>
+
+<script>
+
+
+
+
+function isSubscribed() {
+    console.log('You are subscribed');
+}
+document.getElementById('btn').addEventListener('click', isSubscribed);
+
+let x = myFunction(4, 3);
+document.getElementById("demo").innerHTML = x;
+
+function myFunction(a, b) {
+  return a * b;
+}
+
+
+
+
+
+
+
+// self invoking function
+
+(function(text) {
+    console.log('This is a self-invoking function',text);
+})('Anik');
+</script>
+
+</body>
+</html>
