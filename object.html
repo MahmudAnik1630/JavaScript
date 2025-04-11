@@ -47,7 +47,11 @@
       const obj4 = {
         x: 3,
         y: 5,
-        z: 7
+        z: 7,
+        obj5 : {
+            m :10,
+
+        }
       };
 
 
@@ -57,6 +61,8 @@
 
       const finalObj2 = {...obj3, ...obj4};
       console.log(finalObj2);
+
+      console.log(obj4.obj5.m);
 
 
       document.getElementById("demo1").innerHTML = finalObj.x;
