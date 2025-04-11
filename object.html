@@ -1,28 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-
+  </head>
+  <body>
     <h1>JavaScript Objects</h1>
 
     <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
     <script>
-        const person = {
-            firstName: "John",
-            lastName: "Doe",
-            age: 30,
-            eyeColor: "blue",
-            university: function(){
-                return console.log('Dhaka University');
-            }
-        };
-        document.getElementById("demo").innerHTML = person.firstName + " is " + person.age + " years old";
-        
+      const person = {
+        firstName: "John",
+        lastName: "Doe",
+        age: 30,
+        eyeColor: "blue",
+        university: function () {
+          return console.log("Dhaka University");
+        },
+      };
+      document.getElementById("demo").innerHTML =
+        person.firstName + " is " + person.age + " years old";
 
+      const obj1 = {
+        a: 1,
+        b: 2,
+        c: 3,
+      };
+
+      const obj2 = {
+        x: 3,
+        y: 5,
+        z: 8
+      };
+
+
+
+      const obj3 = {
+        a: 1,
+        b: 2,
+        c: 3,
+      };
+
+      const obj4 = {
+        x: 3,
+        y: 5,
+        z: 7
+      };
+
+
+      const finalObj =Object.assign( obj1, obj2);
+      console.log(finalObj);
+
+
+      const finalObj2 = {...obj3, ...obj4};
+      console.log(finalObj2);
+
+
+      document.getElementById("demo1").innerHTML = finalObj.x;
+      document.getElementById("demo2").innerHTML = JSON.stringify(finalObj);
     </script>
-</body>
+  </body>
 </html>
