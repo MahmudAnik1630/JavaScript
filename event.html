@@ -11,7 +11,7 @@
             padding-top: 50px;
         }
 
-        .btn {
+        button {
             border: 1px solid rgba(84, 20, 20, 0);
             border-radius: 20px;
             width: 140px;
@@ -22,23 +22,62 @@
             font-size: 120%;
             cursor: pointer;
         }
-        .btn:hover {
+        button:hover {
             background-color: green;
             color: white;
             transition: 0.7s;
+        }
+        i{
+            font-size: 20px;
+            margin-right: 5px;
+        }
+        form {
+            margin-top: 20px;
+            text-align: left;
+            display: inline-block;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
         }
 
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
+<body  onload="olLoad()">
     
 
     <h1>JS Event</h1>
+    <button onclick="like()" class="btn" id="btn1"> <i class="fa-regular fa-thumbs-up"></i>Like</button>
     <h1 id="subscribe"></h1>
-    <button onclick="subscribed()" class="btn" id="btn">Subscribe</button>
+    <button onclick="subscribed()" class="btn" id="btn">Subscribe </button>
+
+   
+     <p id="keyp"></p>
+    
+
+    <form action="" id="form" onkeypress="keypress()">
+
+
+        <label for="text">Name</label>
+        <input type="text" id="text" placeholder="Enter your name">
+        <br>
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email">
+        <br>
+        <label for="Message">Message</label>  
+        <textarea name="Message" id="Message" cols="30" rows="10" placeholder="Enter your message"></textarea>
+        <br>
+        <button type="submit">Send Message</button>
+        
+    </form>
+
+
+    <h1 id="textonload"></h1>
+
 
 
 
@@ -46,6 +85,16 @@
         function subscribed() {
             document.getElementById('btn').innerHTML = "subscribed";
             document.getElementById('btn').style.backgroundColor = "green";
+        }
+        function like() {
+            document.getElementById('btn1').innerHTML = ' <i class="fa-solid fa-thumbs-up"></i> Liked';
+            
+        }
+
+        function olLoad() {
+            alert('website has been loaded');
+            document.getElementById('textonload').innerHTML = 'website has been loaded';
+            
         }
        
         
@@ -59,6 +108,13 @@
         //     document.getElementById('subscribe').innerHTML = "You are unsubscribed";
         // }
         // document.getElementById('btn').addEventListener('dblclick', unsubscribe);
+
+
+
+        function keypress(){
+            document.getElementById('keyp').innerHTML ='pressed a key';
+
+        }
 
     </script>
 </body>
