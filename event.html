@@ -38,20 +38,27 @@
 
     <h1>JS Event</h1>
     <h1 id="subscribe"></h1>
-    <button class="btn" id="btn">Subscribe</button>
+    <button onclick="subscribed()" class="btn" id="btn">Subscribe</button>
 
 
 
     <script>
-        function subscribe() {
-            document.getElementById('subscribe').innerHTML = "You are subscribed";
+        function subscribed() {
+            document.getElementById('btn').innerHTML = "subscribed";
+            document.getElementById('btn').style.backgroundColor = "green";
         }
-        document.getElementById('btn').addEventListener('click', subscribe);
+       
+        
 
-        function unsubscribe() {
-            document.getElementById('subscribe').innerHTML = "You are unsubscribed";
-        }
-        document.getElementById('btn').addEventListener('dblclick', unsubscribe);
+        // function subscribe() {
+        //     document.getElementById('subscribe').innerHTML = "You are subscribed";
+        // }
+        // document.getElementById('btn').addEventListener('click', subscribe);
+
+        // function unsubscribe() {
+        //     document.getElementById('subscribe').innerHTML = "You are unsubscribed";
+        // }
+        // document.getElementById('btn').addEventListener('dblclick', unsubscribe);
 
     </script>
 </body>
