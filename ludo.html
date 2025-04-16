@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+
+    body {
+        text-align: center;
+        padding-top: 20px;
+    }
+    .mainimg {
+        width: 100%;
+        height: auto;
+        max-width: 500px;
+        margin: 0 auto;
+        display: block;
+    }
+    button {
+        border: 1px solid rgba(84, 20, 20, 0);
+        border-radius: 20px;
+        width: 140px;
+        text-align: center;
+        background-color: red;
+        padding: 10px;
+        margin: 10px;
+        font-size: 120%;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: green;
+        color: rgb(227, 195, 195);
+        transition: 0.7s;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>JS Ludo</h1>
+    <img class="mainimg" id="mainimg" src="ludo.jpg" alt="">
+
+    <button id="btn" onclick='rollDice()' >Roll the dice </button>
+
+
+
+    <script>
+
+        function rollDice() {
+            let dice = Math.floor(Math.random() * 6) + 1;
+            let img = document.getElementById("mainimg");
+            img.src = dice + ".png";
+            
+        }
+       
+    </script>
+    
+</body>
+</html>
