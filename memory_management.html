@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        // stack memory 
+        // primitive data types
+        // number, string, boolean, null, undefined, symbol
+        // stack memory is used to store primitive data types
+        let a=10;
+        let b=a;
+        b=20;
+        console.log(a,b);
+
+
+        // heap memory
+        // non-primitive data types
+        // object, array, function
+        // heap memory is used to store non-primitive data types
+        let obj1={
+            name:'Anik',
+            age:30
+        }
+        let obj2=obj1;
+        obj2.name='Mahmud';
+        obj2.age=25;
+        console.log(obj1.name,obj2.name,obj1.age,obj2.age);
+
+    </script>
+</body>
+</html>
