@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <h1>JS Date</h1>
+    <p id="date"></p>
+
+
+    <script>
+
+        const date = new Date();
+        console.log(date);
+        // document.getElementById("date").innerHTML = date;
+        // document.getElementById("date").innerHTML = date.toString();
+        document.getElementById("date").innerHTML = date.toDateString();
+        document.getElementById("date").innerHTML = date.toLocaleDateString();
+        document.getElementById("date").innerHTML = date.toLocaleTimeString();
+        document.getElementById("date").innerHTML = date.toLocaleString();
+        document.getElementById("date").innerHTML = date.toUTCString();
+        
+
+
+    //     let a='<br>';
+    //     console.log(date.getDate());
+    //     console.log(date.getDay());
+    //    document.getElementById("date").innerHTML = date.getDate();
+    //     console.log(date.getFullYear());
+    //     document.getElementById("date").innerHTML = date.getFullYear();
+    //     console.log(date.getHours());
+    //     document.getElementById("date").innerHTML = date.getHours();
+    //     console.log(date.getMilliseconds());
+
+    </script>
+</body>
+</html>
