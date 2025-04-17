@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    let numbers = [1, 2, 3, 4, 5];
+
+    let firstEven = numbers.find(function(number) {
+        return number % 2 === 0;
+    });
+
+    let firstEvenDuplicate = numbers.find((x) => x % 2 === 0);
+    console.log(firstEvenDuplicate);
+    
+  
+    let firstEvenIndex = numbers.findIndex(function(number) {
+        return number % 2 === 0;
+    });
+    console.log(firstEvenIndex);
+    </script>
+</body>
+</html>
